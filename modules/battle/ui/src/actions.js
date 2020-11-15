@@ -1,6 +1,6 @@
 
 import { createStructuredSelector } from 'reselect'
-import { ButtonGroup, Button } from '@raid/kit'
+import { Flex, ButtonGroup, Button, Spacer } from '@raid/kit'
 
 import { connect, emit } from 'kunai'
 import { Absolute } from '@arc/components'
@@ -19,6 +19,10 @@ const onBlock = () => {
   })
 }
 
+const onEndTurn = () => {
+  emit(actions.turnEnd)
+}
+
 const ActionComponent = ({
   hull,
   fuel,
@@ -26,10 +30,14 @@ const ActionComponent = ({
 }) => {
   return (
     <Absolute bottom={0} left={0} p={6}>
-      <ButtonGroup>
-        <Button onClick={onAttack}>Attack</Button>
-        <Button onClick={onBlock}>Block</Button>
-      </ButtonGroup>
+      <Flex row>
+        <ButtonGroup>
+          <Button onClick={onAttack}>Attack</Button>
+          <Button onClick={onBlock}>Block</Button>
+        </ButtonGroup>
+        <Spacer px={4} />
+        <Button variant='outline' onClick={onEndTurn}>End Turn</Button>
+      </Flex>
     </Absolute>
   )
 }

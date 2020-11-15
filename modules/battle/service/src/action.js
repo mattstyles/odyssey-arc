@@ -31,6 +31,22 @@ const onTurnAction = (state, payload) => {
   return state
 }
 
+const onTurnEnd = (state, payload) => {
+  emit(actions.turnStart)
+
+  return state
+}
+
+const onTurnStart = (state, payload) => {
+  const [current, max] = selectors.getTurnPower(state)
+
+  emit(actions.changePower, max - current)
+
+  return state
+}
+
 export const update = safe(compress({
-  [actions.turnAction]: onTurnAction
+  [actions.turnAction]: onTurnAction,
+  [actions.turnEnd]: onTurnEnd,
+  [actions.turnStart]: onTurnStart
 }))
