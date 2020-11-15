@@ -1,0 +1,22 @@
+{
+  "name": "kunai",
+  "private": true,
+  "description": "message and cache handlers",
+  "version": "0.1.0",
+  "main": "lib/arc-kunai.js",
+  "module": "lib/arc-kunai.esm.js",
+  "scripts": {
+    "test": "echo 'Nope, do it' && exit 1",
+    "build": "NODE_ENV=production rk build -t core",
+    "watch": "rk watch -t core"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^16.0.2"
+  },
+  "dependencies": {
+    "@arc/log": "*",
+    "@raid/addons": "^6.0.0",
+    "raid": "^6.0.0"
+  }
+}

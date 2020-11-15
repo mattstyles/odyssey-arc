@@ -1,0 +1,18 @@
+{
+  "lerna": "3.22.0",
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "version": {
+      "message": "publish :metal: %s"
+    },
+    "create": {
+      "publishConfig": {
+        "access": "public"
+      },
+      "license": "MIT",
+      "homepage": "https://github.com/mattstyles/odyssey-arc"
+    }
+  }
+}

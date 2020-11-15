@@ -1,0 +1,21 @@
+{
+  "name": "@arc/theme",
+  "private": true,
+  "description": "App theme declaration",
+  "version": "0.1.0",
+  "main": "lib/arc-theme.js",
+  "module": "lib/arc-theme.esm.js",
+  "scripts": {
+    "test": "echo 'Nope, do it' && exit 1",
+    "build": "NODE_ENV=production rk build -t core",
+    "watch": "rk watch -t core"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^16.0.2"
+  },
+  "dependencies": {
+    "@raid/kit": "^0.20.0",
+    "@raid-ui/theme-outrun": "^0.20.0"
+  }
+}

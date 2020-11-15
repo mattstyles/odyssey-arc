@@ -1,0 +1,17 @@
+{
+  "name": "@arc/config",
+  "private": true,
+  "description": "Config used during run time",
+  "version": "0.1.0",
+  "main": "lib/arc-config.js",
+  "module": "lib/arc-config.esm.js",
+  "scripts": {
+    "test": "echo 'Nope, do it' && exit 1",
+    "build": "NODE_ENV=production rk build -t core",
+    "watch": "rk watch -t core"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^16.0.2"
+  }
+}

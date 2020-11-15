@@ -1,0 +1,72 @@
+{
+  "name": "odyssey-arc",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Space roguelite set in the Odyssey universe",
+  "workspaces": [
+    "packages/**",
+    "modules/**"
+  ],
+  "scripts": {
+    "clean": "lerna clean",
+    "setup": "lerna bootstrap --concurrency=1",
+    "precommit": "lerna run lint",
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "dev": "lerna-watch @arc/app",
+    "start": "yarn workspace @arc/app dev",
+    "components": "start-storybook -p 6006"
+  },
+  "author": "Matt Styles",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattstyles/odyssey-arc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mattstyles/odyssey-arc/issues"
+  },
+  "homepage": "https://github.com/mattstyles/odyssey-arc#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "standard"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "**/node_modules/**",
+      "**/lib/"
+    ]
+  },
+  "devDependencies": {
+    "@raid/rk": "^0.20.0",
+    "@storybook/addon-actions": "^6.0.28",
+    "@storybook/addon-backgrounds": "^6.0.28",
+    "@storybook/addon-knobs": "^6.0.28",
+    "@storybook/addon-links": "^6.0.28",
+    "@storybook/addon-viewport": "^6.0.28",
+    "@storybook/react": "^6.0.28",
+    "babel-eslint": "^10.1.0",
+    "lerna": "^3.22.1",
+    "lerna-watch": "^1.0.0",
+    "lint-staged": "^10.5.1",
+    "standard": "^16.0.2"
+  },
+  "dependencies": {
+    "@raid/app-kit": "^0.20.0",
+    "@raid/kit": "^0.20.0",
+    "@styled-system/css": "^5.1.5",
+    "@styled-system/theme-get": "^5.1.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-is": "^17.0.1",
+    "styled-components": "^5.2.1",
+    "styled-system": "^5.1.5"
+  }
+}

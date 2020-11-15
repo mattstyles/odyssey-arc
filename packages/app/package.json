@@ -1,0 +1,60 @@
+{
+  "name": "@arc/app",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Odyssey:Arc web application package",
+  "main": "dist/index.html",
+  "scripts": {
+    "clean": "rimraf dist && mkdirp dist",
+    "lint": "standard",
+    "prebuild": "npm run clean",
+    "build": "NODE_PATH=src NODE_ENV=production parcel build src/index.html",
+    "dev": "NODE_PATH=src DEBUG=true parcel src/index.html"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "**/node_modules/**",
+      "**/lib/"
+    ]
+  },
+  "keywords": [
+    "oa",
+    "odyssey",
+    "odyssey:arc"
+  ],
+  "author": {
+    "name": "Matt Styles",
+    "url": "https://github.com/mattstyles"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matt.styles/odyssey-arc",
+    "directory": "packages/app"
+  },
+  "bugs": {
+    "url": "https://github.com/mattstyles/odyssey-arc/issues"
+  },
+  "homepage": "https://github.com/mattstyles/odyssey-arc",
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.1",
+    "@babel/polyfill": "^7.10.1",
+    "@babel/preset-env": "^7.10.1",
+    "@babel/preset-react": "^7.10.1",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "babel-plugin-transform-react-require": "^1.0.1",
+    "mkdirp": "^1.0.4",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-bundle-visualiser": "^1.2.0",
+    "rimraf": "^3.0.2",
+    "standard": "^16.0.2"
+  },
+  "dependencies": {
+    "@raid-ui/theme-outrun": "^0.20.0",
+    "@raid/kit": "^0.20.0"
+  }
+}

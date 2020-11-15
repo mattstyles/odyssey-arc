@@ -1,0 +1,21 @@
+{
+  "name": "@arc/router",
+  "private": true,
+  "description": "Core router and route handler",
+  "version": "0.1.0",
+  "main": "lib/arc-router.js",
+  "module": "lib/arc-router.esm.js",
+  "scripts": {
+    "test": "echo 'Nope, do it' && exit 1",
+    "build": "NODE_ENV=production rk build -t ui",
+    "watch": "rk watch -t ui"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^16.0.2"
+  },
+  "dependencies": {
+    "@raid/kit": "^0.20.0",
+    "@raid/navigator": "^6.1.0"
+  }
+}

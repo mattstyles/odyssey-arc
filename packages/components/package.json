@@ -1,0 +1,19 @@
+{
+  "name": "@arc/components",
+  "private": true,
+  "description": "specific components for odyssey:arc",
+  "version": "0.0.1",
+  "main": "lib/arc-components.js",
+  "module": "lib/arc-components.esm.js",
+  "author": "Matt Styles",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production rk build -t ui",
+    "watch": "rk watch -t ui"
+  },
+  "dependencies": {
+    "@raid/kit": "^0.20.0",
+    "@raid-ui/icons": "^0.20.0"
+  }
+}
