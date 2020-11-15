@@ -1,0 +1,23 @@
+{
+  "name": "@battle/ui",
+  "private": true,
+  "description": "Battle module ui package",
+  "version": "0.1.0",
+  "main": "lib/arc-battle-ui.js",
+  "module": "lib/arc-battle-ui.esm.js",
+  "scripts": {
+    "test": "echo 'Nope, do it' && exit 1",
+    "build": "NODE_ENV=production rk build -t ui",
+    "watch": "rk watch -t ui"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^16.0.2"
+  },
+  "dependencies": {
+    "@arc/components": "*",
+    "@arc/router": "*",
+    "@raid/kit": "^0.20.0",
+    "kunai": "*"
+  }
+}

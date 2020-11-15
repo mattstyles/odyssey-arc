@@ -1,7 +1,7 @@
 
 export let routes = {
   home: '/',
-  test: '/test'
+  battle: '/battle'
 }
 
 export const registerRoute = (route) => {

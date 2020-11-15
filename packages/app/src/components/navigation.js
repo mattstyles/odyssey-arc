@@ -17,6 +17,11 @@ const Home = React.lazy(() => Promise.all([
   delay(defaultPageDelay)
 ]).then(([mod]) => mod))
 
+const Battle = React.lazy(() => Promise.all([
+  import('@battle/ui'),
+  delay(defaultPageDelay)
+]).then(([mod]) => mod))
+
 // Suspense fallback is currently a modal, this will likely change as there
 // is a single page layout for the entire app and the page components will
 // be composed into the body so a loading would need to centralise inside
@@ -27,7 +32,8 @@ export const Navigation = ({
   return (
     <Suspense fallback={<Loading sx={{ py: 10 }} />}>
       <Navigator navigation={navigation}>
-        <Home route={routes.home} />
+        {/** <Home route={routes.home} /> **/}
+        <Battle route={routes.home} />
       </Navigator>
     </Suspense>
   )

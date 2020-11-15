@@ -1,0 +1,22 @@
+{
+  "name": "@ship/core",
+  "private": true,
+  "description": "Ship module core package",
+  "version": "0.1.0",
+  "main": "lib/arc-ship-core.js",
+  "module": "lib/arc-ship-core.esm.js",
+  "scripts": {
+    "test": "echo 'Nope, do it' && exit 1",
+    "build": "NODE_ENV=production rk build -t ui",
+    "watch": "rk watch -t ui"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^14.3.4"
+  },
+  "dependencies": {
+    "@arc/utils": "*",
+    "@raid/addons": "^6",
+    "reselect": "^4"
+  }
+}
