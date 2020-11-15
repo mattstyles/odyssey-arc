@@ -11,6 +11,7 @@ import { actions } from '@ship/core'
 
 import { Info } from './info'
 import { Actions } from './actions'
+import { Enemy } from './enemy'
 
 const viewSelector = createStructuredSelector({
   foo: state => 'Battle tech operational'
@@ -30,6 +31,7 @@ export const BattleView = connect(
         <View isFlex position='relative'>
           <Info />
           <Actions />
+          <Enemy />
         </View>
       </View>
     )

@@ -4,6 +4,7 @@ import { debug, scope, safe } from '@raid/addons'
 
 import { signal } from 'kunai'
 
+import { ModuleLoader } from 'components/moduleLoader'
 import { App } from 'components/app'
 import { Navigation } from 'components/navigation'
 
@@ -22,7 +23,9 @@ if (process.env.DEBUG) {
 signal.observe(state => {
   render(
     <App>
-      <Navigation navigation={state.navigation} />
+      <ModuleLoader>
+        <Navigation navigation={state.navigation} />
+      </ModuleLoader>
     </App>,
     el
   )

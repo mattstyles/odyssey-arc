@@ -1,10 +1,10 @@
 {
-  "name": "@battle/core",
+  "name": "@battle/service",
   "private": true,
-  "description": "Battle module core package",
+  "description": "Battle module service package",
   "version": "0.1.0",
-  "main": "lib/arc-battle-core.js",
-  "module": "lib/arc-battle-core.esm.js",
+  "main": "lib/arc-battle-service.js",
+  "module": "lib/arc-battle-service.esm.js",
   "scripts": {
     "test": "echo 'Nope, do it' && exit 1",
     "build": "NODE_ENV=production rk build -t ui",

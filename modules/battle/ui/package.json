@@ -17,7 +17,9 @@
   "dependencies": {
     "@arc/components": "*",
     "@arc/router": "*",
+    "@battle/core": "*",
     "@raid/kit": "^0.20.0",
+    "@ship/core": "*",
     "kunai": "*"
   }
 }

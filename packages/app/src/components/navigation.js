@@ -3,19 +3,16 @@ import React, { Suspense } from 'react'
 
 import { Navigator, routes } from '@arc/router'
 import { Loading } from '@arc/components'
+import { delay } from '@arc/utils'
 import config from '@arc/config'
 
 const defaultPageDelay = config.pageLoadDelay
 
-const delay = ms => ({
-  then: resolve => setTimeout(resolve, ms)
-})
-
 // This is a bit annoying as it must be a string and can not be a dynamic property for import to work properly when bundled
-const Home = React.lazy(() => Promise.all([
-  import('@home/ui'),
-  delay(defaultPageDelay)
-]).then(([mod]) => mod))
+// const Home = React.lazy(() => Promise.all([
+//   import('@home/ui'),
+//   delay(defaultPageDelay)
+// ]).then(([mod]) => mod))
 
 const Battle = React.lazy(() => Promise.all([
   import('@battle/ui'),

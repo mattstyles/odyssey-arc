@@ -8,6 +8,9 @@ const shape = {
     // Absorb? Absorb different types?
     block: 10,
     power: [3, 3]
+  },
+  enemy: {
+    hull: [40, 40]
   }
 }
 

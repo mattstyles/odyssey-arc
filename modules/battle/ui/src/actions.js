@@ -1,6 +1,6 @@
 
 import { createStructuredSelector } from 'reselect'
-import { Stack, Text } from '@raid/kit'
+import { ButtonGroup, Button } from '@raid/kit'
 
 import { connect } from 'kunai'
 import { Absolute } from '@arc/components'
@@ -14,8 +14,11 @@ const ActionComponent = ({
   block
 }) => {
   return (
-    <Absolute bottom={0} left={0}>
-      hello world
+    <Absolute bottom={0} left={0} p={6}>
+      <ButtonGroup>
+        <Button>Attack</Button>
+        <Button>Block</Button>
+      </ButtonGroup>
     </Absolute>
   )
 }

@@ -1,3 +1,4 @@
 
 export { get, patchSelector } from './get'
-export { id } from './id'
+export { generateUuid } from './id'
+export { delay } from './timing'
