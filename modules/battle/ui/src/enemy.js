@@ -11,7 +11,7 @@ const EnemyComponent = ({
   hull
 }) => {
   return (
-    <Absolute top={0} right={0}>
+    <Absolute top={0} right={0} p={6}>
       <Stack>
         <Text>Enemy:</Text>
         <Text>{`Hull ${hull[0]}:${hull[1]}`}</Text>

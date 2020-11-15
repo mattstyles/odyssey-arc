@@ -15,7 +15,7 @@ const InfoComponent = ({
   power
 }) => {
   return (
-    <Absolute top={0} left={0}>
+    <Absolute top={0} left={0} p={6}>
       <Stack>
         <Text>{`Hull ${hull[0]}:${hull[1]}`}</Text>
         <Text>{`Fuel ${fuel}`}</Text>

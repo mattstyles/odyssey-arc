@@ -1,9 +1,6 @@
 
 import { signal } from 'kunai'
 
-const update = (state, event) => {
-  console.log('@battle/service')
-  return state
-}
+import { update } from './action'
 
 signal.register(update)
