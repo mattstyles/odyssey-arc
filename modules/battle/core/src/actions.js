@@ -2,9 +2,9 @@
 export const actions = {
   // Turn based actions
   turnAction: '@battle/turn/action',
-  attack: '@battle/turn/attack',
-  block: '@battle/turn/block',
-  powerChange: '@battle/turn/change/power',
-  blockChange: '@battle/turn/change/block',
-  enemyHullChange: '@battle/enemy/change/hull'
+  // attack: '@battle/turn/attack',
+  // block: '@battle/turn/block',
+  changePower: '@battle/turn/change/power',
+  changeBlock: '@battle/turn/change/block',
+  changeEnemyHull: '@battle/enemy/change/hull'
 }

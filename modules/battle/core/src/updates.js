@@ -41,7 +41,7 @@ const onTurnBlockChange = patch((slice, payload) => {
 })
 
 export const update = safe(compress({
-  [actions.enemyHullChange]: onEnemyHullChange,
-  [actions.powerChange]: onTurnPowerChange,
-  [actions.blockChange]: onTurnBlockChange
+  [actions.changeEnemyHull]: onEnemyHullChange,
+  [actions.changePower]: onTurnPowerChange,
+  [actions.changeBlock]: onTurnBlockChange
 }))

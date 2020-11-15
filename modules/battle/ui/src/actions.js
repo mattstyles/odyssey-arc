@@ -10,12 +10,12 @@ import { selectors as battleSelectors, actions } from '@battle/core'
 
 const onAttack = () => {
   emit(actions.turnAction, {
-    component: 'attack'
+    componentID: 'attack'
   })
 }
 const onBlock = () => {
   emit(actions.turnAction, {
-    component: 'block'
+    componentID: 'block'
   })
 }
 

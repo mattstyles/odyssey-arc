@@ -8,25 +8,14 @@
 import { compress, safe } from '@raid/addons'
 import { emit } from 'kunai'
 import { actions, selectors } from '@battle/core'
+import { getComponent } from '@sys/service'
 
-const componentMap = {
-  attack: {
-    powerConsumption: 1,
-    perform: () => {
-      emit(actions.enemyHullChange, -3)
-    }
-  },
-  block: {
-    powerConsumption: 1,
-    perform: () => {
-      emit(actions.blockChange, 4)
-    }
-  }
-}
-
+/**
+ * This function decides if the action can be performed, and then triggers it
+ */
 const onTurnAction = (state, payload) => {
   const [currentPower] = selectors.getTurnPower(state)
-  const component = componentMap[payload.component]
+  const component = getComponent(payload.componentID)
 
   if (!component) {
     return state
@@ -36,8 +25,8 @@ const onTurnAction = (state, payload) => {
     return state
   }
 
-  emit(actions.powerChange, 0 - component.powerConsumption)
-  component.perform()
+  emit(actions.changePower, 0 - component.powerConsumption)
+  component.action()
 
   return state
 }

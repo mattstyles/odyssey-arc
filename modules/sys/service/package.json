@@ -1,10 +1,10 @@
 {
-  "name": "@ship/core",
+  "name": "@sys/service",
   "private": true,
-  "description": "Ship module core package",
+  "description": "System module service package",
   "version": "0.1.0",
-  "main": "lib/arc-ship-core.js",
-  "module": "lib/arc-ship-core.esm.js",
+  "main": "lib/arc-sys-service.js",
+  "module": "lib/arc-sys-service.esm.js",
   "scripts": {
     "test": "echo 'Nope, do it' && exit 1",
     "build": "NODE_ENV=production rk build -t ui",
@@ -16,8 +16,9 @@
   },
   "dependencies": {
     "@arc/utils": "*",
+    "@battle/core": "*",
     "@raid/addons": "^6",
-    "kunai":"*",
+    "kunai": "*",
     "reselect": "^4"
   }
 }
