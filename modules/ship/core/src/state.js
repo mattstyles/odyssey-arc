@@ -4,7 +4,8 @@ import { patchSelector as selectorPatch } from '@arc/utils'
 
 const shape = {
   // [current, max]
-  hull: [70, 70]
+  hull: [70, 70],
+  fuel: 10
 }
 
 const rootKey = 'ship'

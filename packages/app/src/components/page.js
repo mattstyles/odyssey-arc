@@ -1,5 +1,5 @@
 
-import { Screen } from '@raid/kit'
+import { Screen } from '@arc/components'
 
 export const Page = ({ children }) => {
   return (

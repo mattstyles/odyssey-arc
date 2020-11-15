@@ -2,34 +2,35 @@
 import { createStructuredSelector } from 'reselect'
 import {
   View, Stack,
-  ButtonGroup, Button,
-  Text
+  ButtonGroup, Button
 } from '@raid/kit'
 
 import { Link, routes } from '@arc/router'
 import { connect, emit } from 'kunai'
-import { selectors, actions } from '@ship/core'
+import { actions } from '@ship/core'
+
+import { Info } from './info'
+import { Actions } from './actions'
 
 const viewSelector = createStructuredSelector({
-  foo: state => 'Battle tech operational',
-  hull: selectors.getHull
+  foo: state => 'Battle tech operational'
 })
 
 export const BattleView = connect(
   viewSelector,
   ({ foo, hull }) => {
     return (
-      <View>
-        <Stack row>
+      <View isFlex>
+        <Stack row tight>
           <Link route={routes.home}>Home</Link>
           <ButtonGroup>
             <Button onClick={event => emit(actions.changeHull, -4)}>Damage Hull</Button>
           </ButtonGroup>
         </Stack>
-        <Stack>
-          <Text>{foo}</Text>
-          <Text>{`${hull[0]}:${hull[1]}`}</Text>
-        </Stack>
+        <View isFlex position='relative'>
+          <Info />
+          <Actions />
+        </View>
       </View>
     )
   }

@@ -3,6 +3,7 @@ import { createSelector } from 'reselect'
 import { patchSelector as patch } from './state'
 
 export const getHull = patch('hull', [0, 0])
+export const getFuel = patch('fuel', 0)
 
 export const getHullMax = createSelector(
   getHull,
